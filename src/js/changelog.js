@@ -8,22 +8,19 @@ export const CHANGELOG = [
         ],
     },
     {
-   	version: "(C17) 1.0.0",
-	date: "unreleased",
-	entries: [
-			"JusticeForLevel17 Classic Edition!",
-			"A similar JFL17 experience but in full technicolor!",
-			"New levels for painting upgrade purposes",
-			"Reworked Endgame Upgrade Tiers to be slightly more challenging and rewarding over time",
-		],
+        version: "(C17) 1.0.0",
+        date: "unreleased",
+        entries: [
+            "JusticeForLevel17 Classic Edition!",
+            "A similar JFL17 experience but in full technicolor!",
+            "New levels for painting upgrade purposes",
+            "Reworked Endgame Upgrade Tiers to be slightly more challenging and rewarding over time",
+        ],
     },
     {
         version: "(17) 1.1.0",
         date: "12.25.2020",
-        entries: [
-			"New really interesting game mechanics",
-			"Corrected Erroneous changelog dates",
-		],
+        entries: ["New really interesting game mechanics", "Corrected Erroneous changelog dates"],
     },
     {
         version: "(17) 1.0.0",
