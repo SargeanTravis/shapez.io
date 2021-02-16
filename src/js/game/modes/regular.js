@@ -8,6 +8,7 @@ const finalGameShape = "RrCw--Cw:----Rr--:SgSgSgSg";
 const bestShape = "WrRgWrRg:CwCrCwCr:SgSgSgSg";
 const preparementShape = /*"CpRpCp--:SwSwSwSw"*/ bestShape;
 const blueprintShape = "CrCrCrRr:CwCwCwCw";
+const upgradeEnchancementShape = "Rr--Rr--:--Rg--Rg:Rw--Rw--";
 
 // Tiers need % of the previous tier as requirement too
 const tierGrowth = 2.5;
@@ -22,9 +23,10 @@ function generateUpgrades(limitedVersion = false) {
     function generateInfiniteUnlocks() {
         return new Array(numEndgameUpgrades).fill(null).map((_, i) => ({
             required: [
-                { shape: preparementShape, amount: 30000 + i * 10000 },
-                { shape: finalGameShape, amount: 20000 + i * 5000 },
-                { shape: rocketShape, amount: 20000 + i * 5000 },
+                { shape: preparementShape, amount: 75000 + i * 10000 },
+                { shape: finalGameShape, amount: 50000 + i * 7500 },
+                { shape: upgradeEnchancementShape, amount: 25000 + i * 5000 },
+                { shape: rocketShape, amount: 25000 + i * 5000 },
             ],
             excludePrevious: true,
         }));
@@ -36,10 +38,8 @@ function generateUpgrades(limitedVersion = false) {
             fixedImprovements.push(0.1);
         } else if (i < 50) {
             fixedImprovements.push(0.05);
-        } else if (i < 100) {
-            fixedImprovements.push(0.025);
         } else {
-            fixedImprovements.push(0.0125);
+            fixedImprovements.push(0.025);
         }
     }
 
@@ -67,7 +67,24 @@ function generateUpgrades(limitedVersion = false) {
             {
                 required: [
                     { shape: preparementShape, amount: 25000 },
+                    { shape: finalGameShape, amount: 12500 },
+                ],
+                excludePrevious: true,
+            },
+            {
+                required: [
+                    { shape: upgradeEnchancementShape, amount: 12500 },
+                    { shape: preparementShape, amount: 25000 },
                     { shape: finalGameShape, amount: 50000 },
+                ],
+                excludePrevious: true,
+            },
+            {
+                required: [
+                    { shape: upgradeEnchancementShape, amount: 25000 },
+                    { shape: preparementShape, amount: 75000 },
+                    { shape: finalGameShape, amount: 50000 },
+                    { shape: rocketShape, amount: 25000 },
                 ],
                 excludePrevious: true,
             },
@@ -91,13 +108,30 @@ function generateUpgrades(limitedVersion = false) {
                 required: [{ shape: "CrRgRrCg:CwCrCwCr:WgWgWgWg", amount: 50000 }],
             },
             {
-                required: [{ shape: preparementShape, amount: 25000 }],
+                required: [{ shape: preparementShape, amount: 12500 }],
                 excludePrevious: true,
             },
             {
                 required: [
                     { shape: preparementShape, amount: 25000 },
-                    { shape: finalGameShape, amount: 50000 },
+                    { shape: finalGameShape, amount: 12500 },
+                ],
+                excludePrevious: true,
+            },
+            {
+                required: [
+                    { shape: upgradeEnchancementShape, amount: 50000 },
+                    { shape: preparementShape, amount: 25000 },
+                    { shape: finalGameShape, amount: 12500 },
+                ],
+                excludePrevious: true,
+            },
+            {
+                required: [
+                    { shape: upgradeEnchancementShape, amount: 75000 },
+                    { shape: preparementShape, amount: 50000 },
+                    { shape: finalGameShape, amount: 25000 },
+                    { shape: rocketShape, amount: 25000 },
                 ],
                 excludePrevious: true,
             },
@@ -121,13 +155,30 @@ function generateUpgrades(limitedVersion = false) {
                 required: [{ shape: bestShape, amount: 69420 }],
             },
             {
-                required: [{ shape: preparementShape, amount: 25000 }],
+                required: [{ shape: preparementShape, amount: 12500 }],
                 excludePrevious: true,
             },
             {
                 required: [
                     { shape: preparementShape, amount: 25000 },
-                    { shape: finalGameShape, amount: 50000 },
+                    { shape: finalGameShape, amount: 12500 },
+                ],
+                excludePrevious: true,
+            },
+            {
+                required: [
+                    { shape: upgradeEnchancementShape, amount: 50000 },
+                    { shape: preparementShape, amount: 25000 },
+                    { shape: finalGameShape, amount: 12500 },
+                ],
+                excludePrevious: true,
+            },
+            {
+                required: [
+                    { shape: upgradeEnchancementShape, amount: 75000 },
+                    { shape: preparementShape, amount: 50000 },
+                    { shape: finalGameShape, amount: 25000 },
+                    { shape: rocketShape, amount: 25000 },
                 ],
                 excludePrevious: true,
             },
@@ -151,13 +202,30 @@ function generateUpgrades(limitedVersion = false) {
                 required: [{ shape: "WrWgWgWr:CgCwCgCw:CwCrCwCr:WgWrWrWg", amount: 50000 }],
             },
             {
-                required: [{ shape: preparementShape, amount: 25000 }],
+                required: [{ shape: preparementShape, amount: 12500 }],
                 excludePrevious: true,
             },
             {
                 required: [
                     { shape: preparementShape, amount: 25000 },
-                    { shape: finalGameShape, amount: 50000 },
+                    { shape: finalGameShape, amount: 12500 },
+                ],
+                excludePrevious: true,
+            },
+            {
+                required: [
+                    { shape: upgradeEnchancementShape, amount: 50000 },
+                    { shape: preparementShape, amount: 25000 },
+                    { shape: finalGameShape, amount: 12500 },
+                ],
+                excludePrevious: true,
+            },
+            {
+                required: [
+                    { shape: upgradeEnchancementShape, amount: 75000 },
+                    { shape: preparementShape, amount: 50000 },
+                    { shape: finalGameShape, amount: 25000 },
+                    { shape: rocketShape, amount: 25000 },
                 ],
                 excludePrevious: true,
             },
@@ -251,8 +319,6 @@ export function generateLevelDefinitions(limitedVersion = false) {
             reward: enumHubGoalRewards.reward_rotater,
             throughputOnly: true,
         },
-
-        //TODO: Make speed challenge after first beta
 
         // 5
         // Rotater
